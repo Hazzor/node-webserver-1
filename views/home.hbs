@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home Page</title>
+    </head>
+
+    <body>
+        {{> header}}
+
+        {{#if author}}
+        <p>{{screamIt "welcomemessage"  "hester"}}</p>
+        {{/if}}
+
+        <ul class="people_list">
+            {{#each sample }}
+                {{!--{{#each name}}--}}
+                <li>{{this}}</li>
+                {{!--{{/each}}--}}
+            {{/each}}
+        </ul>
+
+    </body>
+    {{> footer}}
+
+</html>
